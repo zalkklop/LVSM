@@ -33,7 +33,7 @@
 
 This is the **official repository** for the paper _"LVSM: A Large View Synthesis Model with Minimal 3D Inductive Bias"_.
 
-The code here is a **re-implementation** and **differs** from the original version developed at Adobe. However, the provided checkpoints are from the original Adobe implementation.
+The code here is a **re-implementation** and **differs** from the original version developed at Adobe. However, the provided checkpoints are from the original Adobe implementation and were trained inside Adobe.
 
 We have verified that the re-implemented version matches the performance of the original. For any questions or issues, please contact Haian Jin at [haianjin0415@gmail.com](mailto:haianjin0415@gmail.com).
 
