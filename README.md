@@ -68,7 +68,7 @@ The scene-level evaluation is conducted on the [RealEstate10K](http://schadenfre
 
 ## 2. Training
 
-Before training, you need to follow the instructions [here](https://docs.wandb.ai/guides/track/public-api-guide/#:~:text=You%20can%20generate%20an%20API,in%20the%20upper%20right%20corner.) to generate the Wandb key file and save it in the `configs` folder as `api_keys.yaml`. You can use the `api_keys_example.yaml` as a template.
+Before training, you need to follow the instructions [here](https://docs.wandb.ai/guides/track/public-api-guide/#:~:text=You%20can%20generate%20an%20API,in%20the%20upper%20right%20corner.) to generate the Wandb key file for logging and save it in the `configs` folder as `api_keys.yaml`. You can use the `configs/api_keys_example.yaml` as a template.
 
 The original training command:
 ```bash
