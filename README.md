@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 ### Data
 Download the RealEstate10K dataset from [this link](http://schadenfreude.csail.mit.edu:8000/), which is provided by [pixelSplat](https://github.com/dcharatan/pixelsplat), and put the data in `YOUR_RAW_DATAPATH`.
-run the following command to preprocess the data into our format.
+Run the following command to preprocess the data into our format.
 ```bash
 python preprocess_data.py --base_path YOUR_RAW_DATAPATH --output_dir YOUR_PROCESSED_DATAPATH --mode ['train' or 'test']
 ```
@@ -68,7 +68,9 @@ The scene-level evaluation is conducted on the [RealEstate10K](http://schadenfre
 
 ## 2. Training
 
-Original training command:
+Before training, you need to follow the instructions [here](https://docs.wandb.ai/guides/track/public-api-guide/#:~:text=You%20can%20generate%20an%20API,in%20the%20upper%20right%20corner.) to generate the Wandb key file and save it in the `configs` folder as `api_keys.yaml`. You can use the `api_keys_example.yaml` as a template.
+
+The original training command:
 ```bash
 torchrun --nproc_per_node 8 --nnodes 8 \
     --rdzv_id 18635 --rdzv_backend c10d --rdzv_endpoint localhost:29502 \
@@ -86,7 +88,7 @@ torchrun --nproc_per_node 8 --nnodes 1 \
     training.batch_size_per_gpu = 16
 
 ```
-Here, we decrease the total batch size from 512 to 128, transformer layers from 24 to 12. You can also increase the patch-size from 8 to 16 for faster training with lower performance. 
+Here, we decrease the total batch size from 512 to 128, and the transformer layers from 24 to 12. You can also increase the patch-size from 8 to 16 for faster training with lower performance. 
 We have also discussed the efficient settings (single/two GPU training) in the paper.
 
 
