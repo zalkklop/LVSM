@@ -108,6 +108,7 @@ inference.compute_metrics = true \
 inference.render_video = true \
 inference_out_dir = ./experiments/evaluation/test
 ```
+After the inference, the code will generate a html file in the `inference_out_dir` folder. You can open the html file to view the results.
 
 ## 4. Citation
 
